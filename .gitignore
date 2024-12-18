@@ -1,0 +1,14 @@
+.husky/_
+.idea/
+.vs/
+.vscode/
+*.log
+*.todo
+build/
+coverage/
+dist/
+node_modules/
+package-lock.json
+target/
+yarn.lock
+/packs/
