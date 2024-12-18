@@ -1,0 +1,30 @@
+{
+  "id": "CoCDarkAges",
+  "title": "Call of Cthulhu Dark Ages",
+  "description": "An implementation of the Call of Cthulhu 3th/7th Edition game system for Foundry Virtual Tabletop.",
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "Ingrid Pruszyńska"
+    }
+  ],
+  "compatibility": {
+    "minimum": 11,
+    "verified": 12
+  },
+  "styles": [
+    "https://fonts.googleapis.com/css?family=Noto%20Sans|Voltaire|Lusitana"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ]
+}
