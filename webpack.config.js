@@ -1,27 +1,18 @@
-const path = require("path");
+import path from 'path';
 
-module.exports = {
-  entry: "./src/index.js",
+const buildMode = process.argv[3] === 'production' ? 'production' : 'development';
+
+const systemFolderName = "CoCDarkAges";
+const systemFolderPath = "C:\\Users\\prusz\\AppData\\Local\\FoundryVTT\\Data\\systems";
+
+export default {
+  bail: buildMode === 'production',
+  entry: "./module/cocDarkAges.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(systemFolderPath, systemFolderName),
     filename: "bundle.js",
+    publicPath: "/"
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: "babel-loader",
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-    ],
-  },
-  devServer: {
-    static: "./dist",
-    hot: true,
-  },
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  mode: buildMode,
+  watch: buildMode === 'development'
 };
